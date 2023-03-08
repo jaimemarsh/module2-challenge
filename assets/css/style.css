@@ -2,19 +2,19 @@
   box-sizing: border-box;
 }
 
-/* color variables */
+/* variables */
 :root {
-  --mainblue: rgb(19, 48, 90);
-  --mainpink: rgb(194, 133, 211);
-  --maingrey: rgba(49, 52, 61, 1);
+  --main: rgb(50, 50, 50);
+  --accent: rgb(88, 179, 93);
   --dark: rgb(0, 0, 0);
   --light: rgb(255, 255, 255);
+  --font: "Forum""sans-serif";
 }
 
 body {
-  color: var(--mainblue);
+  color: var(--main);
   background-color: var(--light);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: var(--font);
   line-height: 2;
 }
 
@@ -36,26 +36,39 @@ header {
   /* items wrap to addtional lines */
   flex-wrap: wrap;
   align-items: center;
-  /* background-color: var(--maingrey); */
 }
 
+
 /* Jaime Marsh h1 */
-header h1 {
-  color: var(--mainpink);
-  text-shadow: 2px 2px 2px var(--mainblue);
-  padding: 5px 1% 5px 6%;
+h1 {
+  color: var(--accent);
+  margin: 5px;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.hello {
+  text-indent: 2%;
+  font-size: 30px;
+}
+
+.introBox {
+  color: var(--main);
+  /* top right bottom left */
+  padding: 5% 10%;
   margin: 0;
   font-size: 50px;
   line-height: 1;
 }
+
+img {}
 
 /* nav links */
 nav a {
   /* remove blue link feature */
   text-decoration: none;
   padding: 10px;
-  color: var(--mainpink);
-  text-shadow: 2px 2px 2px var(--mainblue);
+  color: var(--accent);
   margin-right: 10px;
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
@@ -66,11 +79,11 @@ nav a {
 
 nav a:hover {
   background-size: 100%;
-  color: var(--mainblue);
+  color: var(--main);
 }
 
 .subtitle {
-  background-image: url("../images/purplewaves.jpg"), linear-gradient(180deg, var(--mainblue) 0%, var(--mainpink) 100%);
+  /* background-image: url("../images/purplewaves.jpg"), linear-gradient(180deg, var(--main) 0%, var(--accent) 100%); */
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
@@ -88,8 +101,7 @@ nav a:hover {
 }
 
 .subtitle h2 {
-  text-shadow: 8px 8px 5px var(--mainblue);
-  color: var(--mainpink);
+  color: var(--accent);
   margin: 0;
   padding: 5px 10px;
   font-size: 2.3rem;
@@ -121,8 +133,7 @@ main {
   flex: 0 0 20%;
   text-align: right;
   padding-right: 15px;
-  border-right: 5px solid var(--mainblue);
-  text-shadow: 2px 2px 2px var(--mainpink);
+  border-right: 5px solid var(--main);
   font-size: 50px;
   line-height: 2;
 }
@@ -131,8 +142,9 @@ main {
   flex: 0 0 77%;
 }
 
-.sections p {
+p {
   margin-bottom: 30px;
+  font-size: 20px;
 }
 
 /* Middle section with images */
@@ -143,9 +155,8 @@ main {
 }
 
 .flex-item {
-  border: 5px solid var(--mainpink);
-  background-color: var(--mainblue);
-  color: var(--maingrey);
+  border: 5px solid var(--accent);
+  background-color: var(--main);
   min-height: 150px;
   max-height: 150px;
   flex-basis: calc(50% - 1em);
@@ -166,11 +177,11 @@ main {
 }
 
 .flex-item:hover {
-  background-color: rgba(102, 0, 255, 0.3);
+  background-color: var(--white);
 }
 
 .flex-item div {
-  background-color: var(--mainpink);
+  background-color: var(--accent);
   padding: 10px;
 }
 
@@ -190,12 +201,12 @@ main {
 }
 
 .contact-me address a {
-  color: var(--mainpink);
+  color: var(--accent);
   padding: 5px;
   text-decoration: none;
   font-size: 25px;
   font-style: normal;
-  /* background-image: linear-gradient(180deg, var(--mainpink) 0%, var(--mainpink) 100%); */
+  /* background-image: linear-gradient(180deg, var(--accent) 0%, var(--accent) 100%); */
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom;
@@ -206,12 +217,12 @@ main {
 
 .contact-me address a:hover {
   background-size: 100% 88%;
-  color: var(--mainblue);
+  color: var(--main);
 }
 
 /* images */
 
-.surf-report {
+/* .surf-report {
   background-image: url("../images/placeholder.jpg");
 }
 
@@ -229,7 +240,7 @@ main {
 
 .html-css {
   background-image: url("../images/placeholder.jpg");
-}
+} */
 
 
 
@@ -259,7 +270,7 @@ main {
 
   .sections h2 {
     border-right: none;
-    border-bottom: 4px solid var(--mainblue);
+    border-bottom: 4px solid var(--main);
     margin-bottom: 20px;
     padding-bottom: 10px;
     text-align: left;
