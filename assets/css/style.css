@@ -24,6 +24,11 @@ h3 {
   margin: 0;
 }
 
+.imgBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
 header {
   background-color: var(--light);
@@ -41,22 +46,24 @@ header {
 
 /* Jaime Marsh h1 */
 h1 {
-  color: var(--accent);
+  color: var(--main);
   margin: 5px;
   font-size: 50px;
   line-height: 1;
 }
 
 .hello {
+  color: var(--accent);
   text-indent: 2%;
   font-size: 30px;
 }
 
 .introBox {
   color: var(--main);
-  /* top right bottom left */
-  padding: 5% 10%;
-  margin: 0;
+  /* background-color: rgb(189, 189, 189); */
+  border: solid;
+  padding: 10% 10% 10% 10%;
+  margin: 5%;
   font-size: 50px;
   line-height: 1;
 }
@@ -82,19 +89,19 @@ nav a:hover {
   color: var(--main);
 }
 
-.subtitle {
-  /* background-image: url("../images/purplewaves.jpg"), linear-gradient(180deg, var(--main) 0%, var(--accent) 100%); */
-  background-size: cover;
+/* .subtitle { */
+/* background-image: url("../images/purplewaves.jpg"), linear-gradient(180deg, var(--main) 0%, var(--accent) 100%); */
+/* background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
   min-height: 40vh;
   color: var(--light);
-  padding: 30px;
+  padding: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   text-align: right;
-}
+} */
 
 .subtitle div {
   flex: 0 0 90%;
@@ -133,7 +140,7 @@ main {
   flex: 0 0 20%;
   text-align: right;
   padding-right: 15px;
-  border-right: 5px solid var(--main);
+  border-right: 5px solid var(--accent);
   font-size: 50px;
   line-height: 2;
 }
@@ -270,7 +277,7 @@ p {
 
   .sections h2 {
     border-right: none;
-    border-bottom: 4px solid var(--main);
+    border-bottom: 4px solid var(--accent);
     margin-bottom: 20px;
     padding-bottom: 10px;
     text-align: left;
