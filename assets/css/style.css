@@ -25,11 +25,9 @@ h3 {
 }
 
 #aboutme,
-#contact-me,
 #work {
   display: none;
 }
-
 
 
 header {
@@ -46,7 +44,7 @@ header {
 }
 
 header {
-  background-color: var(--main);
+  background-color: var(--accent);
 }
 
 /* Jaime Marsh h1 */
@@ -66,9 +64,8 @@ h1 {
   align-content: stretch;
   border: solid var(--accent);
   border-radius: 25px;
-  /* padding: 5% 5% 1% 10%; */
   margin: 2% 10% 0% 10%;
-  padding: 30px;
+  padding: 50px;
   font-size: 50px;
   line-height: 1;
 }
@@ -106,22 +103,23 @@ img {
   padding-right: 5%;
 }
 
-
-
+nav {
+  font-size: 25px;
+}
 
 /* nav links */
 nav a {
+  padding: 25px;
   text-decoration: none;
-  padding: 20px;
+  color: var(--dark);
   /* margin: 160px; */
-  color: var(--light);
-  font-size: 25px;
 }
 
 nav a:hover {
   background-size: 100%;
-  color: var(--accent);
+  color: var(--light);
 }
+
 
 /* .subtitle { */
 /* background-image: url("../images/purplewaves.jpg"), linear-gradient(180deg, var(--main) 0%, var(--accent) 100%); */
@@ -249,22 +247,21 @@ p {
 
 .contact-me address a {
   color: var(--main);
-  padding: 5px;
   text-decoration: none;
   font-size: 25px;
   font-style: normal;
-  /* background-image: linear-gradient(180deg, var(--accent) 0%, var(--accent) 100%); */
   background-repeat: no-repeat;
-  background-size: 100%;
   background-position: bottom;
-  transition: all 0.25s ease-in;
-  margin: 10px;
   display: inline-block;
 }
 
 .contact-me address a:hover {
-  background-size: 100% 88%;
   color: var(--accent);
+}
+
+.iconAddress {
+  color: var(--accent);
+  padding: 10px;
 }
 
 /* images */
