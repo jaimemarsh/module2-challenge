@@ -1,28 +1,22 @@
 
-console.log("hello")
+console.log("javascript is connected")
 
-// let clickEvent = document.querySelector('#aboutmeBtn')
-// //when clickEvent is clicked and aboutmeSection is hidden by default show aboutmeSection, otherwise hide it
-// clickEvent.addEventListener('click', () => {
-//     let aboutmeSection = document.querySelector('#aboutme')
-//     if (aboutmeSection.getElementsByClassName.display === 'none') {
-//         aboutmeSection.getElementsByClassName.display = 'block';
-//     } else {
-//         aboutmeSection.style.display = 'none';
-//     }
-// });
-
-
-//aboutmeBtn
-//about me
-
-let aboutmeBtn = document.querySelector('#aboutmeBtn')
-let aboutme = document.querySelector('#aboutme')
-
-aboutmeBtn.addEventListener('click', () => {
-    if (aboutme.style.display === 'none') {
-        aboutme.style.display = 'block';
+// makes aboutme section appear
+function myFunction() {
+    let aboutMe = document.querySelector('#aboutme');
+    let displaySetting = aboutMe.style.hidden;
+    // flex for flexbox
+    if (displaySetting === 'flex') {
+        aboutMe.style.display = 'none';
     } else {
-        aboutme.style.display === 'none'
+        aboutMe.style.display = 'flex'
     }
-});
+
+    console.log("Button");
+}
+
+let btn = document.querySelector("#aboutmeBtn");
+btn.addEventListener("click", myFunction);
+
+
+
