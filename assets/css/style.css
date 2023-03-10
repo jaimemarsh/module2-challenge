@@ -331,6 +331,17 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  img {
+    display: none;
+  }
+
+  nav a {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    text-decoration: none;
+    color: var(--dark);
+  }
 
   .flex-item,
   .flex-item:first-child {
