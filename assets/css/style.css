@@ -25,14 +25,37 @@ h3 {
 }
 
 #aboutme,
-#work {
+#work,
+#hamburgerBtn {
   display: none;
 }
 
+nav {
+  font-size: 25px;
+}
+
+/* nav links */
+nav a {
+  padding: 25px;
+  text-decoration: none;
+  color: var(--dark);
+  /* margin: 160px; */
+}
+
+nav a:hover {
+  background-size: 100%;
+  color: var(--light);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 header {
   background-color: var(--light);
-  padding: 15px;
+  padding: 10px;
   display: flex;
   /* defines direction */
   flex-direction: row;
@@ -54,8 +77,6 @@ h1 {
   font-size: 50px;
   line-height: 1;
 }
-
-
 
 /* introBox is flexbox for Hello Im Jaime Marsh and Img */
 .introBox {
@@ -107,24 +128,6 @@ img {
   /* border: solid red; */
   margin-left: 10%;
   padding-right: 5%;
-}
-
-
-nav {
-  font-size: 25px;
-}
-
-/* nav links */
-nav a {
-  padding: 25px;
-  text-decoration: none;
-  color: var(--dark);
-  /* margin: 160px; */
-}
-
-nav a:hover {
-  background-size: 100%;
-  color: var(--light);
 }
 
 
@@ -273,27 +276,6 @@ p {
   padding: 10px;
 }
 
-/* images */
-
-/* .surf-report {
-  background-image: url("../images/placeholder.jpg");
-}
-
-.node-IoT {
-  background-image: url("../images/placeholder.jpg");
-}
-
-.react-javascript-css {
-  background-image: url("../images/placeholder.jpg");
-}
-
-.MREN-stack {
-  background-image: url("../images/placeholder.jpg");
-}
-
-.html-css {
-  background-image: url("../images/placeholder.jpg");
-} */
 
 
 
@@ -330,20 +312,102 @@ p {
     text-align: left;
     font-size: 7vw;
   }
+
+  .flex-item,
+  .flex-item:first-child {
+    flex-basis: 100%;
+  }
+
+  .flex-item:first-child {
+    min-height: 150px;
+  }
+
+  .subtitle {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-me address {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  img {
+
+  nav {
     display: none;
   }
 
+  img {
+    border-radius: 50%;
+    height: 200px;
+  }
+
+  /* nav links */
   nav a {
-    display: flex;
-    justify-content: center;
-    padding: 3px;
+    font-size: 20px;
+    padding: 5px;
     text-decoration: none;
     color: var(--dark);
   }
+
+  nav a:hover {
+    color: var(--light);
+  }
+
+  #hamburgerBtn {
+    display: flex;
+  }
+
+  header {
+    background-color: var(--accent);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Jaime Marsh h1 */
+  h1 {
+    color: var(--main);
+    margin: auto;
+    padding: 10px;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  /* introBox is flexbox for Hello Im Jaime Marsh and Img */
+  .introBox {
+    color: var(--main);
+    display: flex;
+    flex-direction: column;
+    border: solid var(--accent);
+    border-radius: 25px;
+    margin: 10% 10% 0% 10%;
+    padding: 25px;
+    line-height: 1;
+  }
+
+  /* introCol is flexbox for box and hello (Hello Im Jaime Marsh) */
+  .introCol {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  /* colors of boxes helps show what is what */
+  /* Hello */
+  .hello {
+    text-indent: 30%;
+    padding: 5px;
+    /* border: solid green; */
+    color: var(--accent);
+    font-size: 30px;
+  }
+
 
   .flex-item,
   .flex-item:first-child {
